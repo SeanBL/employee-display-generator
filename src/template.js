@@ -1,5 +1,5 @@
 
-const generateHtml = ({}) =>
+const generateHtml = ({name}) =>
 `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,8 +12,10 @@ const generateHtml = ({}) =>
         <h1 class="header">My Team</h1>
     </header>
     <div class="flex-container">
-        <div> </div>
+        <div>${name}</div>
         <div>
     
     </div>
-`
+`;
+
+module.exports = generateHtml;
