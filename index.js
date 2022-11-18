@@ -53,8 +53,16 @@ inquirer
                 {
                     type: 'input',
                     name: 'github',
-                    message: 'What is the employees GitHub username?'
+                    message: 'What is the employees GitHub username?',
+                    when: (choices) => choices.employeeType === 'Engineer'
+
                 },
+                {
+                    type: 'input',
+                    name: 'school',
+                    message: 'What is the name of the interns school?',
+                    when: (choices) => choices.employeeType === 'Intern'
+                }
             ]
         }
     ])
