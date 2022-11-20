@@ -1,7 +1,7 @@
 const Manager = require("../lib/manager");
 
-const generateHtml = ({}) =>
-`<!DOCTYPE html>
+generateHtml = (managerBox) => {
+ let htmlTemp = `<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,10 +13,12 @@ const generateHtml = ({}) =>
         <h1 class="header">My Team</h1>
     </header>
     <div class="flex-container">
-        <div></div>
-        <div>
+        ${managerBox}
+        
     
     </div>
-`;
+`
+return htmlTemp;
+};
 
 module.exports = generateHtml;

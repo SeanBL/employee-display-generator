@@ -74,14 +74,17 @@ inquirer
         }
     ])
     .then((answers) => {
-        const htmlPage = generateHtml(answers);
-        let managerArry =[];
-        let manager = new Manager(answers.name, answers.id, answers.email, answers.number);
-        managerArry.push(manager);
         
+        let manager = new Manager(answers.name, answers.id, answers.email, answers.number);  
         let managerBox = managerInfo(manager);
+        let fullHtmlPage = generateHtml(managerBox);
 
-        fs.writeFile('index.html', htmlPage, (err) =>
+        
+
+
+        fs.writeFile('index.html', fullHtmlPage, (err) =>
             err ? console.log(err) : console.log('created index.html')
         );
+
+        
     });
