@@ -1,7 +1,13 @@
-const generateHtml = require('./src/template');
+
+const generateHtml = require('./src/main-html-template');
 const inquirer = require('inquirer');
 const fs = require('fs');
+const Manager = require('./lib/manager');
+const Engineer = require('./lib/engineer');
+const Intern = require('./lib/intern');
+const managerInfo = require('./src/manager-html-template');
 inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
+
 
 inquirer
     .prompt([
@@ -69,6 +75,11 @@ inquirer
     ])
     .then((answers) => {
         const htmlPage = generateHtml(answers);
+        let managerArry =[];
+        let manager = new Manager(answers.name, answers.id, answers.email, answers.number);
+        managerArry.push(manager);
+        
+        let managerBox = managerInfo(manager);
 
         fs.writeFile('index.html', htmlPage, (err) =>
             err ? console.log(err) : console.log('created index.html')
