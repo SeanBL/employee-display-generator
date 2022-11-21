@@ -1,15 +1,18 @@
 internInfo = (intern) => {
-    let internBox = 
-    `<div>${intern.name}</div>
-    <div>Engineer</div>
-    <div>
-        <p>ID: ${intern.id}</P>
-        <p>Email: <a href="mailto:${intern.email}"> ${intern.email} </a></span></P>
-        <p>GitHub: ${intern.github}</p>
-    </div>
-    `
+    let internBox = ``;
+    for (let i = 0; i < intern.length; i++) {
+        let internTemp = 
+        `<div>${intern[i].name}</div>
+        <div>Intern</div>
+        <div>
+            <p>ID: ${intern[i].id}</P>
+            <p>Email: <a href="mailto:${intern[i].email}"> ${intern[i].email} </a></span></P>
+            <p>School: ${intern[i].school}</p>
+        </div>
+        `
+    internBox += internTemp;
+    }
     
-     console.log(intern.name);
     return internBox;
     }
     module.exports = internInfo;

@@ -1,7 +1,8 @@
-const Manager = require("../lib/manager");
-const Engineer = require("../lib/engineer");
+// const Manager = require("../lib/manager");
+// const Engineer = require("../lib/engineer");
+// const Intern = require("./intern-html-template");
 
-generateHtml = (managerBox, engineerBox) => {
+generateHtml = (managerBox, engineerBox, internBox) => {
  let htmlTemp = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,6 +19,9 @@ generateHtml = (managerBox, engineerBox) => {
     </div>
     <div>
         ${engineerBox}
+    </div>
+    <div>
+        ${internBox}
     </div>
     
 `

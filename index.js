@@ -81,7 +81,7 @@ inquirer
         let managerBox = managerInfo(manager);
         
         console.log(answers.employee[0].employeeType);
-        //console.log(answers.employee);
+       
         const eRole = answers.employee;
         let engineerArry = [];
         let internArry = [];
@@ -102,9 +102,10 @@ inquirer
         }
         console.log(engineerArry.length);
         console.log(internArry.length);
-        //console.log(engineerName, engineerId, engineerEmail, engineerGithub);
+        
+        let internBox = internInfo(internArry);
         let engineerBox = engineerInfo(engineerArry);
-        let fullHtmlPage = generateHtml(managerBox, engineerBox);
+        let fullHtmlPage = generateHtml(managerBox, engineerBox, internBox);
         console.log(engineerBox);
 
         fs.writeFile('index.html', fullHtmlPage, (err) =>
