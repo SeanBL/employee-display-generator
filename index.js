@@ -6,6 +6,8 @@ const Manager = require('./lib/manager');
 const Engineer = require('./lib/engineer');
 const Intern = require('./lib/intern');
 const managerInfo = require('./src/manager-html-template');
+const engineerInfo = require('./src/engineer-html-template');
+const internInfo = require('./src/intern-html-template');
 inquirer.registerPrompt("loop", require("inquirer-loop")(inquirer));
 
 
@@ -77,7 +79,7 @@ inquirer
         
         let manager = new Manager(answers.name, answers.id, answers.email, answers.number);  
         let managerBox = managerInfo(manager);
-        let fullHtmlPage = generateHtml(managerBox);
+        
         console.log(answers.employee[0].employeeType);
         //console.log(answers.employee);
         const eRole = answers.employee;
@@ -101,7 +103,9 @@ inquirer
         console.log(engineerArry.length);
         console.log(internArry.length);
         //console.log(engineerName, engineerId, engineerEmail, engineerGithub);
-
+        let engineerBox = engineerInfo(engineerArry);
+        let fullHtmlPage = generateHtml(managerBox, engineerBox);
+        console.log(engineerBox);
 
         fs.writeFile('index.html', fullHtmlPage, (err) =>
             err ? console.log(err) : console.log('created index.html')
