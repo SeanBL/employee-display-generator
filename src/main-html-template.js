@@ -1,4 +1,5 @@
 const Manager = require("../lib/manager");
+const Engineer = require("../lib/engineer");
 
 generateHtml = (managerBox, engineerBox) => {
  let htmlTemp = `<!DOCTYPE html>
@@ -18,6 +19,7 @@ generateHtml = (managerBox, engineerBox) => {
     <div>
         ${engineerBox}
     </div>
+    
 `
 return htmlTemp;
 };
