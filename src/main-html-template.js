@@ -1,6 +1,6 @@
 const Manager = require("../lib/manager");
 
-generateHtml = (managerBox) => {
+generateHtml = (managerBox, engineerBox) => {
  let htmlTemp = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +14,9 @@ generateHtml = (managerBox) => {
     </header>
     <div class="flex-container">
         ${managerBox}
-        
-    
+    </div>
+    <div>
+        ${engineerBox}
     </div>
 `
 return htmlTemp;
