@@ -78,8 +78,29 @@ inquirer
         let manager = new Manager(answers.name, answers.id, answers.email, answers.number);  
         let managerBox = managerInfo(manager);
         let fullHtmlPage = generateHtml(managerBox);
+        console.log(answers.employee[0].employeeType);
+        //console.log(answers.employee);
+        const eRole = answers.employee;
+        let engineerArry = [];
+        let internArry = [];
 
-        
+        for (let i = 0; i < eRole.length; i++) {
+            if (eRole[i].employeeType === "Engineer") {
+                console.log("engineer picked");
+                let engineer = new Engineer(eRole[i].name, eRole[i].id, eRole[i].email, eRole[i].github);
+                console.log(engineer);
+                engineerArry.push(engineer);
+            } else {
+                console.log("intern picked");
+                let intern = new Intern(eRole[i].name, eRole[i].id, eRole[i].email, eRole[i].school);
+                console.log(intern);
+                internArry.push(intern);
+            }
+            
+        }
+        console.log(engineerArry.length);
+        console.log(internArry.length);
+        //console.log(engineerName, engineerId, engineerEmail, engineerGithub);
 
 
         fs.writeFile('index.html', fullHtmlPage, (err) =>
