@@ -1,5 +1,6 @@
 
 const generateHtml = require('./src/main-html-template');
+const generateCss = require('./src/css-generator');
 const inquirer = require('inquirer');
 const fs = require('fs');
 const Manager = require('./lib/manager');
@@ -80,7 +81,7 @@ inquirer
         let manager = new Manager(answers.name, answers.id, answers.email, answers.number);  
         let managerBox = managerInfo(manager);
         
-        console.log(answers.employee[0].employeeType);
+        // console.log(answers.employee[0].employeeType);
        
         const eRole = answers.employee;
         let engineerArry = [];
@@ -108,9 +109,13 @@ inquirer
         let fullHtmlPage = generateHtml(managerBox, engineerBox, internBox);
         console.log(engineerBox);
 
-        fs.writeFile('index.html', fullHtmlPage, (err) =>
-            err ? console.log(err) : console.log('created index.html')
+        let cssFile = generateCss();
+
+        fs.writeFile('./dist/styles.css', cssFile, (err) => err ? console.log(err) : console.log('created css.style')
         );
 
+        fs.writeFile('./dist/index.html', fullHtmlPage, (err) =>
+            err ? console.log(err) : console.log('created index.html')
+        );
         
     });
