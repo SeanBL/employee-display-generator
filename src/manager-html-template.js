@@ -1,14 +1,17 @@
 
 managerInfo = (manager) => {
 let managerBox = 
-`<div class="flex-item">
-<div class="name">${manager.name}</div>
-<div>Manager</div>
-<div>
-    <p>ID: ${manager.id}</P>
-    <p>Email: <a href="mailto:${manager.email}"> ${manager.email} </a></span></P>
-    <p>Office number: ${manager.officeNumber}</p>
-</div>
+`
+<div class="flex-item">
+    <div class="titles">
+        <div class="name">${manager.name}</div>
+        <p class="role"><i class='fas fa-coffee icon'></i>Manager</p>
+    </div>
+    <div class="e-info">
+        <p class="id">ID: ${manager.id}</P>
+        <p class="email">Email: <a href="mailto:${manager.email}"> ${manager.email} </a></P>
+        <p class="last-info">Office number: ${manager.officeNumber}</p>
+    </div>
 </div>
 `
 
