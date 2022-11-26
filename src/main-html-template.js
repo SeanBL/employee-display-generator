@@ -23,8 +23,7 @@ generateHtml = (managerBox, engineerBox, internBox) => {
         ${internBox}
     </div>
 </body>
-</html>    
-`
+</html>`
 return htmlTemp;
 };
 

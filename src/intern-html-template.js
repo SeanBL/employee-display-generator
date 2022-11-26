@@ -2,8 +2,7 @@ internInfo = (intern) => {
     let internBox = ``;
     for (let i = 0; i < intern.length; i++) {
         let internTemp = 
-        `
-        <div class="flex-item">
+        `<div class="flex-item">
             <div class="titles">
                 <div class="name">${intern[i].name}</div>
                 <p class="role"><i class='fas fa-user-graduate icon'></i>${intern[i].getRole()}</p>
@@ -13,8 +12,7 @@ internInfo = (intern) => {
                 <p class="email">Email: <a href="mailto:${intern[i].email}"> ${intern[i].email} </a></P>
                 <p class="last-info">School: ${intern[i].getSchool()}</p>
             </div>
-        </div>
-        `
+        </div>`
     internBox += internTemp;
     }
     
