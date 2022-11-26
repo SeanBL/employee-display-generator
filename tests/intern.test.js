@@ -36,7 +36,7 @@ describe("Intern", () => {
             expect(intern.getSchool()).toBe("UC Berkeley");
         });
 
-        it("should return emplopyee's role", () => {
+        it("should return employee's role", () => {
             const intern = new Intern("Paimon", "I419", "paimon@email.com", "UC Berkeley");
             expect(intern.getRole()).toBe("Intern");
         });
