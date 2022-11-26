@@ -6,12 +6,12 @@ internInfo = (intern) => {
         <div class="flex-item">
             <div class="titles">
                 <div class="name">${intern[i].name}</div>
-                <p class="role"><i class='fas fa-user-graduate icon'></i>Intern</p>
+                <p class="role"><i class='fas fa-user-graduate icon'></i>${intern[i].getRole()}</p>
             </div>
             <div class="e-info">
                 <p class="id">ID: ${intern[i].id}</P>
                 <p class="email">Email: <a href="mailto:${intern[i].email}"> ${intern[i].email} </a></P>
-                <p class="last-info">School: ${intern[i].school}</p>
+                <p class="last-info">School: ${intern[i].getSchool()}</p>
             </div>
         </div>
         `
