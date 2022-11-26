@@ -14,7 +14,7 @@
 - [Questions](#questions)
 
 ## Installation
-To properly run this application, clone a copy of the repository from GitHub. Next, install inquirer by typing "npm install inqurier@8.2.4". In the terminal, navigate to the directory where the index.js file is located. In the terminal, type "node index.js". The Team Profile Generator shoud begin by prompting the user to provide a name of the team manager. Answer all the questions in the prompt and a html file should be generated with all the user's input. To  Here is a link to the GitHub repository: https://seanbl.github.io/employee-display-generator/
+To properly run this application, clone a copy of the repository from GitHub. Next, install inquirer by typing "npm install inqurier@8.2.4". In the terminal, navigate to the directory where the index.js file is located. In the terminal, type "node index.js". The Team Profile Generator shoud begin by prompting the user to provide a name of the team manager. Answer all the questions in the prompt and a html file should be generated with all the user's input. To  Here is a link to the GitHub repository: https://github.com/SeanBL/employee-display-generator
 
 ## Usage
 Click on the link below for a video demo on how to use the terminal to generate a team profile in a html file.
