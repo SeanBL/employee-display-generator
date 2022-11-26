@@ -5,7 +5,7 @@ let managerBox =
 <div class="flex-item">
     <div class="titles">
         <div class="name">${manager.name}</div>
-        <p class="role"><i class='fas fa-coffee icon'></i>Manager</p>
+        <p class="role"><i class='fas fa-coffee icon'></i>${manager.getRole()}</p>
     </div>
     <div class="e-info">
         <p class="id">ID: ${manager.id}</P>
